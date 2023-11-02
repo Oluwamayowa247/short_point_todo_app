@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:short_point_todo_app/components/app_bar.dart';
 import 'package:short_point_todo_app/components/gopro_tile.dart';
 import 'package:short_point_todo_app/components/todolistview.dart';
+import 'package:short_point_todo_app/screens/add_task_screen.dart';
 
 class TodoAppHome extends StatefulWidget {
   const TodoAppHome({super.key});
@@ -31,7 +32,12 @@ class _TodoAppHomeState extends State<TodoAppHome> {
             ],
           ),
           child: FloatingActionButton(
-            onPressed: () {},
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => AddTaskScreen(),
+              ),
+            ),
             backgroundColor: Color(0xFF3556AB),
             child: Icon(
               Icons.add,

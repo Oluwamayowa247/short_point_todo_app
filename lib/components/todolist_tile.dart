@@ -66,8 +66,8 @@ class _TodoListTileState extends State<TodoListTile> {
             Text(
               widget.taskTitle,
               style: TextStyle(
-                color: widget.isDone ? Color(0xFF071C55) : Colors.black,
-                fontSize: 16,
+                color: widget.isDone ? Colors.grey : Color(0xFF071C55),
+                fontSize: 20,
                 fontFamily: 'Roboto',
                 fontWeight: FontWeight.w500,
                 decoration: widget.isDone ? TextDecoration.lineThrough : null,

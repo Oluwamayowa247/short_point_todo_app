@@ -14,8 +14,8 @@ class _EditButtonState extends State<EditButton> {
     return GestureDetector(
       onTap: widget.editTask,
       child: Container(
-        width: 51,
-        height: 45,
+        width: 55,
+        height: 50,
         decoration: ShapeDecoration(
           color: Colors.white,
           shape: RoundedRectangleBorder(
