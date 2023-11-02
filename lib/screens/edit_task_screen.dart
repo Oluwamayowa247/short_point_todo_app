@@ -42,60 +42,62 @@ class _EditTaskScreenState extends State<EditTaskScreen> {
           ),
         ),
       ),
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        decoration: BoxDecoration(
-          color: Color(0xFFF3F3F3),
-        ),
-        child: Padding(
-          padding: EdgeInsets.only(left: 16, right: 10),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.04,
-              ),
-              Text(
-                'Task Name',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontFamily: 'Roboto',
-                  fontWeight: FontWeight.w400,
+      body: SingleChildScrollView(
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          decoration: BoxDecoration(
+            color: Color(0xFFF3F3F3),
+          ),
+          child: Padding(
+            padding: EdgeInsets.only(left: 16, right: 10),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.04,
                 ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                height: 60,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(
-                      color: Color(0xFFCACACA),
-                    )),
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Enter task name',
-                    hintStyle: TextStyle(
-                      color: Color(0xFFCACACA),
-                      fontSize: 20,
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w400,
-                    ),
-                    border: InputBorder.none,
-                    contentPadding: EdgeInsets.only(left: 10),
+                Text(
+                  'Task Name',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.60,
-              ),
-              DoneButton()
-            ],
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: 60,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: Color(0xFFCACACA),
+                      )),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Enter task name',
+                      hintStyle: TextStyle(
+                        color: Color(0xFFCACACA),
+                        fontSize: 20,
+                        fontFamily: 'Roboto',
+                        fontWeight: FontWeight.w400,
+                      ),
+                      border: InputBorder.none,
+                      contentPadding: EdgeInsets.only(left: 10),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.60,
+                ),
+                DoneButton()
+              ],
+            ),
           ),
         ),
       ),
